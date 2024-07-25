@@ -1,13 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.rmco {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 27px;
+}
+
+.login-box {
+  height: 550px;
+  width: 410px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+}
+
+.circle {
+  top: -40px; /* Adjust the position as needed */
+  left: 100%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  width: 100px;
+  height: 100px;
+}
+
+.rectangle-login {
+  top: -25px; /* Adjust the position as needed */
+  left: 3%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  width: 75px;
+  height: 160px;
+  border-radius: 5px;
+}
+
+.box-login {
+  top: -50px; /* Adjust the position as needed */
+  left: -4%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+}
+
+.dotted-design {
+  display: grid;
+  grid-template-columns: repeat(5, 14px);
+  grid-template-rows: repeat(5, 12px);
+  gap: 10px;
+  position: absolute;
+  left: -700px; /* Adjust this value to position the dots correctly */
+  top: 32%;
+  transform: translateY(-50%);
+}
+
+.dotted-design div {
+  width: 7px;
+  height: 7px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+@media (max-width: 1024px) {
+  .dotted-design {
+    display: none;
+  }
+
+  .login-box {
+    width: 90%;
+    height: auto;
+  }
+
+  .circle,
+  .rectangle-login,
+  .box-login {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #02872c;
+  }
+
+  .login-box {
+    width: 100%;
+    padding: 20px;
+    box-shadow: none;
+    height: 900px;
+    width: 410px;
+  }
 }
